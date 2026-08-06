@@ -1,0 +1,18 @@
+# Simple Addition and Subtraction Program
+
+# Get two numbers from the user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Ask the user what operation they want
+operation = input("Type '+' for addition or '-' for subtraction: ")
+
+# Perform the selected operation
+if operation == '+':
+    result = num1 + num2
+    print("Result:", result)
+elif operation == '-':
+    result = num1 - num2
+    print("Result:", result)
+else:
+    print("Invalid operation")
