@@ -1,6 +1,10 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
+// Point axios to the deployed backend on Vercel (VITE_API_URL).
+// In local dev this is empty so the Vite proxy handles /api/* as usual.
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || '';
+
 const AuthContext = createContext(null);
 
 // Set up global axios request interceptor for token authentication
