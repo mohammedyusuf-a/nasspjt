@@ -1,6 +1,8 @@
 # ShopEZ — E-Commerce Application (nasspjt)
 
-## 📁 Project Resources & Documentation
+## 📌 Quick Links & Resources
+- **GitHub Repository**: [https://github.com/mohammedyusuf-a/nasspjt.git](https://github.com/mohammedyusuf-a/nasspjt.git)
+- **Live Demo Video**: [Watch Live Demo Video](https://drive.google.com/file/d/13OUhv1gR-wZfKkX_zTph98jiAlkmNyyk/view?usp=drivesdk)
 - **Google Drive Folder**: [ShopEZ Project Assets & Resources](https://drive.google.com/drive/folders/1sjHcYt7nIm9UugCOmuFimCBf4O8f8bJu)
 
 ## 🚀 Deployment Links & Environment Variables
