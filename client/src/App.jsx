@@ -40,10 +40,10 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:id" element={<ProductDetail />} />
+                <Route path="/cart" element={<Cart />} />
 
                 {/* Protected */}
                 <Route element={<ProtectedRoute />}>
-                  <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/order-success" element={<OrderSuccess />} />

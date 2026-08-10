@@ -1,14 +1,18 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
 export default function Register() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { login } = useAuth();
   const [form, setForm] = useState({ name: '', email: '', password: '', confirmPassword: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const searchParams = new URLSearchParams(location.search);
+  const targetRedirect = searchParams.get('redirect') || location.state?.from?.pathname;
 
   const handleChange = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
@@ -21,7 +25,8 @@ export default function Register() {
     try {
       const { data } = await axios.post('/api/auth/register', { name: form.name, email: form.email, password: form.password });
       login(data.token, data.user);
-      navigate('/');
+      const destination = targetRedirect || '/';
+      navigate(destination, { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed. Please try again.');
     } finally {

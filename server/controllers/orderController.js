@@ -1,5 +1,6 @@
 const Order = require('../models/Order');
 const Cart = require('../models/Cart');
+const Product = require('../models/Product');
 
 // POST /api/orders
 const createOrder = async (req, res) => {
@@ -7,14 +8,41 @@ const createOrder = async (req, res) => {
     const { items, shippingAddress, paymentMethod, totalAmount, deliveryCharge } = req.body;
     if (!items || items.length === 0) return res.status(400).json({ message: 'No items in order' });
 
+    // Validate and format items
+    const formattedItems = [];
+    for (const item of items) {
+      const productId = item.product?._id || item.product;
+      if (!productId) continue;
+      formattedItems.push({
+        product: productId,
+        name: item.name || 'Product',
+        image: item.image || '',
+        price: Number(item.price) || 0,
+        quantity: Number(item.quantity) || 1
+      });
+    }
+
+    if (formattedItems.length === 0) {
+      return res.status(400).json({ message: 'Invalid items in order' });
+    }
+
     const order = await Order.create({
       user: req.user._id,
-      items,
+      items: formattedItems,
       shippingAddress,
       paymentMethod,
-      totalAmount,
-      deliveryCharge
+      totalAmount: Number(totalAmount) || 0,
+      deliveryCharge: Number(deliveryCharge) || 0
     });
+
+    // Reduce product stock in database
+    for (const item of formattedItems) {
+      try {
+        await Product.findByIdAndUpdate(item.product, {
+          $inc: { stock: -item.quantity }
+        });
+      } catch { /* ignore individual stock update failure */ }
+    }
 
     // Clear cart after order
     await Cart.findOneAndUpdate({ user: req.user._id }, { items: [] });

@@ -37,14 +37,16 @@ export default function ProductCard({ product }) {
   const handleAddToCart = async (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if (!user) { window.location.href = '/login'; return; }
     try {
       setAdding(true);
-      await addToCart(product._id, 1);
+      await addToCart(product._id, 1, product);
       setAdded(true);
       setTimeout(() => setAdded(false), 2000);
-    } catch { /* ignore */ }
-    finally { setAdding(false); }
+    } catch (err) {
+      console.error('Add to cart error:', err);
+    } finally {
+      setAdding(false);
+    }
   };
 
   const toggleWishlist = (e) => {

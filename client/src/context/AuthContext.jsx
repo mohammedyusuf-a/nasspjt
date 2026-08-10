@@ -3,6 +3,35 @@ import axios from 'axios';
 
 const AuthContext = createContext(null);
 
+// Set up global axios request interceptor for token authentication
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem('shopez_token');
+  if (token && token !== 'undefined') {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+}, (error) => Promise.reject(error));
+
+axios.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    // Only clear auth state when the token itself is invalid/expired,
+    // not for every 401 (e.g. a cart or product endpoint 401).
+    if (error.response && error.response.status === 401) {
+      const url = error.config?.url || '';
+      const isAuthEndpoint = url.includes('/api/auth') || url.includes('/api/orders');
+      const msg = error.response.data?.message || '';
+      const isTokenError = msg.toLowerCase().includes('token') || msg.toLowerCase().includes('not authorized');
+      if (isAuthEndpoint || isTokenError) {
+        localStorage.removeItem('shopez_token');
+        localStorage.removeItem('shopez_user');
+        delete axios.defaults.headers.common['Authorization'];
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

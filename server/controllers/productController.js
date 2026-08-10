@@ -30,10 +30,26 @@ const getProductById = async (req, res) => {
 // POST /api/products (admin)
 const createProduct = async (req, res) => {
   try {
-    const { name, description, price, discount, category, image, stock } = req.body;
-    if (!name || !description || !price || !category || !image)
-      return res.status(400).json({ message: 'Required fields missing' });
-    const product = await Product.create({ name, description, price, discount, category, image, stock });
+    const { name, description, price, discount, category, image, stock, rating, reviews } = req.body;
+    if (!name || !description || price === undefined || price === null || price === '' || !category || !image)
+      return res.status(400).json({ message: 'Required fields missing: name, description, price, category, image' });
+
+    const numPrice = Number(price);
+    if (isNaN(numPrice) || numPrice < 0) {
+      return res.status(400).json({ message: 'Price must be a valid non-negative number' });
+    }
+
+    const product = await Product.create({
+      name: name.trim(),
+      description: description.trim(),
+      price: numPrice,
+      discount: isNaN(Number(discount)) ? 0 : Number(discount),
+      category: category.trim(),
+      image: image.trim(),
+      stock: isNaN(Number(stock)) ? 100 : Number(stock),
+      rating: isNaN(Number(rating)) ? 4.0 : Number(rating),
+      reviews: isNaN(Number(reviews)) ? 0 : Number(reviews)
+    });
     res.status(201).json(product);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -43,7 +59,14 @@ const createProduct = async (req, res) => {
 // PUT /api/products/:id (admin)
 const updateProduct = async (req, res) => {
   try {
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+    const updateData = { ...req.body };
+    if (updateData.price !== undefined) updateData.price = isNaN(Number(updateData.price)) ? 0 : Number(updateData.price);
+    if (updateData.discount !== undefined) updateData.discount = isNaN(Number(updateData.discount)) ? 0 : Number(updateData.discount);
+    if (updateData.stock !== undefined) updateData.stock = isNaN(Number(updateData.stock)) ? 100 : Number(updateData.stock);
+    if (updateData.rating !== undefined) updateData.rating = isNaN(Number(updateData.rating)) ? 4.0 : Number(updateData.rating);
+    if (updateData.reviews !== undefined) updateData.reviews = isNaN(Number(updateData.reviews)) ? 0 : Number(updateData.reviews);
+
+    const product = await Product.findByIdAndUpdate(req.params.id, updateData, { new: true, runValidators: true });
     if (!product) return res.status(404).json({ message: 'Product not found' });
     res.json(product);
   } catch (err) {

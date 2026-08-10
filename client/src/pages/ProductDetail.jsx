@@ -44,22 +44,29 @@ export default function ProductDetail() {
     : product.price;
 
   const handleAddToCart = async () => {
-    if (!user) { navigate('/login'); return; }
+    setError('');
     setAdding(true);
     try {
-      await addToCart(product._id, qty);
+      await addToCart(product._id, qty, product);
       setAdded(true);
       setTimeout(() => setAdded(false), 2500);
-    } catch { setError('Failed to add to cart.'); }
-    finally { setAdding(false); }
+    } catch (err) {
+      console.error('Failed to add to cart:', err);
+      setError('Failed to add to cart. Please try again.');
+    } finally {
+      setAdding(false);
+    }
   };
 
   const handleBuyNow = async () => {
-    if (!user) { navigate('/login'); return; }
+    setError('');
     try {
-      await addToCart(product._id, qty);
-      navigate('/cart');
-    } catch { setError('Failed. Try again.'); }
+      await addToCart(product._id, qty, product);
+      navigate('/checkout');
+    } catch (err) {
+      console.error('Failed to buy now:', err);
+      setError('Failed to process Buy Now. Please try again.');
+    }
   };
 
   return (

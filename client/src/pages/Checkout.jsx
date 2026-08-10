@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 
 const paymentOptions = [
   { value: 'COD', label: 'Cash on Delivery', icon: '💵' },
@@ -16,6 +17,7 @@ export default function Checkout() {
   const navigate = useNavigate();
   const location = useLocation();
   const { cart, cartTotal, clearCart } = useCart();
+  const { user } = useAuth();
   const { deliveryCharge = 49, finalTotal } = location.state || {};
 
   const [addr, setAddr] = useState({ fullName: '', addressLine1: '', addressLine2: '', city: '', state: '', pincode: '', phone: '' });
@@ -28,13 +30,28 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    const items = cart.items?.map(i => ({
-      product: i.product._id,
-      name: i.product.name,
-      image: i.product.image,
-      price: i.product.discount ? +(i.product.price * (1 - i.product.discount / 100)).toFixed(2) : i.product.price,
-      quantity: i.quantity
-    }));
+
+    // Guard: ensure the user is still authenticated before placing the order
+    const token = localStorage.getItem('shopez_token');
+    if (!token || !user) {
+      navigate(`/login?redirect=${encodeURIComponent('/checkout')}`, { state: { from: location } });
+      return;
+    }
+
+    const items = cart.items
+      ?.filter(i => i && i.product)
+      .map(i => {
+        const p = i.product;
+        const productId = typeof p === 'object' ? p._id : p;
+        const price = typeof p === 'object' && p.discount ? +(p.price * (1 - p.discount / 100)).toFixed(2) : (p?.price || 0);
+        return {
+          product: productId,
+          name: p?.name || 'Product',
+          image: p?.image || '',
+          price: price,
+          quantity: i.quantity || 1
+        };
+      });
 
     if (!items || items.length === 0) { setError('Your cart is empty.'); return; }
 
@@ -46,7 +63,12 @@ export default function Checkout() {
         paymentMethod,
         totalAmount: finalTotal || cartTotal,
         deliveryCharge
+      }, {
+        // Explicitly pass the token as a safety net so the order never
+        // fails due to a missing Authorization header.
+        headers: { Authorization: `Bearer ${token}` }
       });
+      await clearCart();
       navigate('/order-success', { state: { orderId: data._id } });
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to place order. Try again.');
@@ -152,17 +174,17 @@ export default function Checkout() {
               </div>
 
               <div className="summary-row">
-                <span>Subtotal</span><span>₹{cartTotal.toFixed(2)}</span>
+                <span>Subtotal</span><span>₹{cartTotal.toLocaleString()}</span>
               </div>
               <div className="summary-row">
                 <span>Delivery</span>
                 <span style={{ color: deliveryCharge === 0 ? '#6ee7b7' : 'inherit' }}>
-                  {deliveryCharge === 0 ? 'FREE' : `₹${deliveryCharge}`}
+                  {deliveryCharge === 0 ? 'FREE' : `₹${deliveryCharge.toLocaleString()}`}
                 </span>
               </div>
               <div className="summary-row total">
                 <span>Total</span>
-                <span className="summary-value">₹{total.toFixed(2)}</span>
+                <span className="summary-value">₹{total.toLocaleString()}</span>
               </div>
 
               {error && <div className="alert-error" style={{ marginTop: '1rem' }}><span>⚠️</span> {error}</div>}
@@ -174,7 +196,7 @@ export default function Checkout() {
                 style={{ marginTop: '1.25rem', padding: '0.85rem' }}
                 disabled={loading}
               >
-                {loading ? '⏳ Placing Order...' : `🎉 Place Order · ₹${total.toFixed(2)}`}
+                {loading ? '⏳ Placing Order...' : `🎉 Place Order · ₹${total.toLocaleString()}`}
               </button>
               <p style={{ fontSize: '0.75rem', color: 'var(--text-400)', textAlign: 'center', marginTop: '0.75rem' }}>
                 🔒 Your payment info is secure and encrypted

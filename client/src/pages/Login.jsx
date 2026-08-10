@@ -1,14 +1,18 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { login } = useAuth();
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const searchParams = new URLSearchParams(location.search);
+  const targetRedirect = searchParams.get('redirect') || location.state?.from?.pathname;
 
   const handleChange = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
@@ -19,7 +23,8 @@ export default function Login() {
     try {
       const { data } = await axios.post('/api/auth/login', form);
       login(data.token, data.user);
-      navigate(data.user.role === 'admin' ? '/admin' : '/');
+      const destination = targetRedirect || (data.user.role === 'admin' ? '/admin' : '/');
+      navigate(destination, { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed. Please try again.');
     } finally {

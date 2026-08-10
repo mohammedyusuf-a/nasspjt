@@ -93,20 +93,15 @@ export default function LimitedOffersBlock({ offerProducts = [] }) {
     e.preventDefault();
     e.stopPropagation();
 
-    if (!user) {
-      navigate('/login');
-      return;
-    }
-
     try {
       setAddingId(product._id);
-      await addToCart(product._id, 1);
+      await addToCart(product._id, 1, product);
       setAddedIds((prev) => ({ ...prev, [product._id]: true }));
       setTimeout(() => {
         setAddedIds((prev) => ({ ...prev, [product._id]: false }));
       }, 2000);
-    } catch {
-      /* ignore */
+    } catch (err) {
+      console.error('Failed to claim deal:', err);
     } finally {
       setAddingId(null);
     }

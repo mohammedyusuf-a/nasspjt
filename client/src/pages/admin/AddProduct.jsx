@@ -17,14 +17,18 @@ export default function AddProduct() {
     setError('');
     setLoading(true);
     try {
-      await axios.post('/api/products', {
-        ...form,
-        price: parseFloat(form.price),
-        discount: parseFloat(form.discount),
-        stock: parseInt(form.stock),
-        rating: parseFloat(form.rating),
-        reviews: parseInt(form.reviews)
-      });
+      const payload = {
+        name: form.name.trim(),
+        description: form.description.trim(),
+        category: form.category.trim(),
+        image: form.image.trim(),
+        price: parseFloat(form.price) || 0,
+        discount: parseFloat(form.discount) || 0,
+        stock: parseInt(form.stock) || 0,
+        rating: parseFloat(form.rating) || 4.0,
+        reviews: parseInt(form.reviews) || 0
+      };
+      await axios.post('/api/products', payload);
       navigate('/admin/products');
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to add product.');

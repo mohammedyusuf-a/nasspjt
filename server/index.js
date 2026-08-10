@@ -52,11 +52,11 @@ const seedProducts = async (force = false) => {
     await Product.insertMany(products);
     console.log(`✅ ${products.length} products successfully seeded into database!`);
   } else {
-    // Update existing products image URLs so they are instantly fixed without wiping cart/orders
+    // Update existing products with new luxury prices and attributes
     for (const p of products) {
-      await Product.updateOne({ name: p.name }, { $set: { image: p.image } });
+      await Product.updateOne({ name: p.name }, { $set: { price: p.price, discount: p.discount, image: p.image, category: p.category, description: p.description } });
     }
-    console.log(`✅ ${products.length} product image URLs updated in database!`);
+    console.log(`✅ ${products.length} product prices & details updated in database!`);
   }
 };
 
@@ -69,7 +69,7 @@ mongoose
   .then(async () => {
     console.log('✅ MongoDB connected');
     await seedAdmin();
-    await seedProducts(); // automatically updates image URLs on startup
+    await seedProducts(true); // force re-seed luxury product prices
     app.listen(PORT, () => {
       console.log(`✅ Server running on http://localhost:${PORT}`);
     });

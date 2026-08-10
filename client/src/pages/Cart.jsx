@@ -10,7 +10,7 @@ export default function Cart() {
   if (loading) return <div className="loader-wrapper"><div className="spinner" /></div>;
 
   const items = cart.items || [];
-  const deliveryCharge = cartTotal >= 499 ? 0 : 49;
+  const deliveryCharge = cartTotal >= 2999 ? 0 : 99;
   const finalTotal = cartTotal + deliveryCharge;
 
   if (items.length === 0) {
@@ -83,22 +83,22 @@ export default function Cart() {
             <h3 style={{ marginBottom: '1.25rem', fontSize: '1rem', fontWeight: 700 }}>Order Summary</h3>
             <div className="summary-row">
               <span>Subtotal ({cartCount} items)</span>
-              <span className="summary-value">₹{cartTotal.toFixed(2)}</span>
+              <span className="summary-value">₹{cartTotal.toLocaleString()}</span>
             </div>
             <div className="summary-row">
               <span>Delivery Charge</span>
               <span className="summary-value" style={{ color: deliveryCharge === 0 ? '#6ee7b7' : 'inherit' }}>
-                {deliveryCharge === 0 ? 'FREE 🎉' : `₹${deliveryCharge}`}
+                {deliveryCharge === 0 ? 'FREE 🎉' : `₹${deliveryCharge.toLocaleString()}`}
               </span>
             </div>
             {deliveryCharge > 0 && (
               <p style={{ fontSize: '0.75rem', color: 'var(--text-400)', marginTop: '-0.25rem' }}>
-                Add ₹{(499 - cartTotal).toFixed(0)} more for free delivery
+                Add ₹{(2999 - cartTotal).toLocaleString()} more for free delivery
               </p>
             )}
             <div className="summary-row total">
               <span>Total</span>
-              <span className="summary-value">₹{finalTotal.toFixed(2)}</span>
+              <span className="summary-value">₹{finalTotal.toLocaleString()}</span>
             </div>
             <button
               id="proceed-to-checkout-btn"

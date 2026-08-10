@@ -3,7 +3,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Ultra-Quiet Active Noise Cancelling Headphones',
     description: 'Studio-grade sound performance with active noise cancellation, 40h battery, fast-charge USB-C, plush memory foam ear cups, and multi-device connection.',
-    price: 299,
+    price: 5999,
     discount: 45,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop',
@@ -17,7 +17,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart Watch Pro X - Titanium Edition',
     description: 'Advanced ECG monitor, blood oxygen tracker, dual-frequency GPS, AMOLED display, and 10-day battery life in a rugged aircraft titanium case.',
-    price: 349,
+    price: 9999,
     discount: 35,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop',
@@ -31,7 +31,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Air Speed Pro Running Shoes',
     description: 'Hyper-responsive nitrogen infused foam midsole with ultra-lightweight breathable woven upper for marathon speed and daily training comfort.',
-    price: 189,
+    price: 4999,
     discount: 40,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop',
@@ -45,7 +45,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Automatic Barista Espresso Machine',
     description: 'Italian 19-bar pump system, integrated conical burr grinder, automatic milk frother, and touchscreen display for cafe-quality coffee at home.',
-    price: 499,
+    price: 18999,
     discount: 30,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&auto=format&fit=crop',
@@ -59,7 +59,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Full-Grain Italian Leather Weekender Bag',
     description: 'Handcrafted genuine leather duffel bag with shoe compartment, brass zippers, padded shoulder strap, and waterproof interior lining.',
-    price: 269,
+    price: 6999,
     discount: 50,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop',
@@ -73,7 +73,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Titanium Polarized Aviator Sunglasses',
     description: 'Military-grade titanium alloy frame with HD polarized UV400 anti-glare lenses. Extremely lightweight and indestructible flex hinges.',
-    price: 120,
+    price: 2499,
     discount: 55,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop',
@@ -87,7 +87,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: '360° Surround Waterproof Bluetooth Speaker',
     description: 'Custom dual drivers and twin passive radiators deliver 30W rich bass. IPX7 fully submersible with 24-hour non-stop battery power.',
-    price: 149,
+    price: 3999,
     discount: 38,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&auto=format&fit=crop',
@@ -101,7 +101,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Ultra-Light Wireless Gaming Mouse 26k DPI',
     description: '59-gram honeycomb chassis, optical switches rated for 90M clicks, lag-free 2.4GHz wireless connection, and PTFE smooth glide feet.',
-    price: 119,
+    price: 2999,
     discount: 40,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop',
@@ -115,7 +115,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Cinema 4K Drone with Gimbal Stabilizer',
     description: '4K/60fps HDR video, 3-axis mechanical gimbal, 10km HD image transmission, 35-minute flight time, and obstacle avoidance sensors.',
-    price: 799,
+    price: 24999,
     discount: 25,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=600&auto=format&fit=crop',
@@ -129,7 +129,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Mechanical RGB Hot-Swappable Keyboard',
     description: 'Gasket-mounted aluminum body, custom lubricated linear switches, PBT double-shot keycaps, and tri-mode wireless/Bluetooth/USB-C.',
-    price: 169,
+    price: 3499,
     discount: 35,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop',
@@ -143,7 +143,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Curved UltraWide 34" Gaming Monitor 165Hz',
     description: '1500R curved WQHD panel with 1ms response time, HDR400, G-Sync compatibility, and edge-to-edge frameless design.',
-    price: 599,
+    price: 19999,
     discount: 28,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop',
@@ -157,7 +157,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Ergonomic Mesh Executive Chair',
     description: 'Dynamic lumbar support, 3D adjustable armrests, breathable Korean mesh, seat depth slider, and 135-degree recline mechanism.',
-    price: 320,
+    price: 8999,
     discount: 42,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop',
@@ -171,7 +171,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart Robot Vacuum & Mop Combo',
     description: 'LiDAR laser navigation, 5000Pa extreme suction, self-emptying dustbase, and intelligent carpet detection with app control.',
-    price: 450,
+    price: 14999,
     discount: 33,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=600&auto=format&fit=crop',
@@ -185,7 +185,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Noise-Isolating True Wireless Earbuds',
     description: 'Custom 11mm dynamic drivers, spatial audio with head tracking, IPX5 sweat resistance, and wireless charging case with 32h battery.',
-    price: 159,
+    price: 3499,
     discount: 40,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop',
@@ -199,7 +199,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Stainless Steel Insulated Thermal Flask 40oz',
     description: 'Vacuum sealed double-wall insulation keeps drinks ice cold for 48h or steaming hot for 24h. Leak-proof straw lid included.',
-    price: 45,
+    price: 1199,
     discount: 30,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&auto=format&fit=crop',
@@ -213,7 +213,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Non-Slip Eco Rubber Yoga Mat 6mm',
     description: 'High-density natural tree rubber cushion with laser alignment markings. Antimicrobial, non-toxic, and includes carrier strap.',
-    price: 79,
+    price: 1499,
     discount: 35,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format&fit=crop',
@@ -227,7 +227,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Sonic Electric Toothbrush with UV Sanitizer',
     description: '40,000 micro-vibrations per minute, 4 cleaning modes, 2-minute smart timer, wireless charging dock with UV brush sanitizer.',
-    price: 89,
+    price: 1899,
     discount: 45,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1553708306-03c61307b22a?w=600&auto=format&fit=crop',
@@ -241,7 +241,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Hydrating Botanical Skincare Serum Set',
     description: 'Infused with hyaluronic acid, vitamin C, and organic botanical extracts to revitalize complexion, deeply hydrate, and boost skin radiance.',
-    price: 65,
+    price: 1299,
     discount: 50,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop',
@@ -255,7 +255,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Adjustable Quick-Select Dumbbell Set 52.5lbs',
     description: 'Replaces 15 sets of weights with intuitive dial adjustment system from 5 to 52.5 lbs per dumbbell. Heavy-duty steel plates.',
-    price: 349,
+    price: 9999,
     discount: 25,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop',
@@ -269,7 +269,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Aroma Diffuser & Ambient Smart Lamp',
     description: 'Ultrasonic essential oil diffuser with 16 million RGB color choices, smart app integration, silent operation, and auto shut-off.',
-    price: 55,
+    price: 1299,
     discount: 40,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&auto=format&fit=crop',
@@ -283,7 +283,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Pro Mirrorless Camera 24.2MP 4K Video',
     description: 'Full-frame sensor with AI subject detection autofocus, 5-axis in-body image stabilization, and dual SD card slots.',
-    price: 1299,
+    price: 39999,
     discount: 20,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop',
@@ -297,7 +297,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Luxury Chronograph Men\'s Steel Watch',
     description: 'Japanese quartz chronograph movement, scratch-resistant sapphire crystal glass, 100m water resistance, and solid stainless steel bracelet.',
-    price: 240,
+    price: 4999,
     discount: 48,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop',
@@ -313,7 +313,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Minimalist Matte Ceramic Plant Pot Set',
     description: 'Set of 3 handcrafted ceramic pots with natural bamboo drainage trays. Minimalist design ideal for succulents and indoor botanicals.',
-    price: 49,
+    price: 1199,
     discount: 10,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600&auto=format&fit=crop',
@@ -324,7 +324,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Fast Prime Camera Lens 50mm f/1.4',
     description: 'Ultra-bright f/1.4 maximum aperture for creamy background bokeh and superb low-light performance with silent stepping autofocus motor.',
-    price: 449,
+    price: 14999,
     discount: 12,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=600&auto=format&fit=crop',
@@ -335,7 +335,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Slim Aluminum Laptop Stand with Cooling Fans',
     description: 'Ergonomic height-adjustable aluminum laptop riser with dual silent cooling fans, cable management slots, and anti-slip silicone pads.',
-    price: 45,
+    price: 1499,
     discount: 15,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop',
@@ -346,7 +346,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Organic Cotton Oversized Streetwear Hoodie',
     description: 'Heavyweight 450GSM organic French terry cotton with relaxed dropped shoulders, double-lined hood, and deep kangaroo pocket.',
-    price: 79,
+    price: 2499,
     discount: 0,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&auto=format&fit=crop',
@@ -357,7 +357,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Classic Vintage Denim Jacket',
     description: '100% premium rigid cotton denim featuring distressed detailing, branded button closures, and dual chest button-flap pockets.',
-    price: 89,
+    price: 2999,
     discount: 15,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&auto=format&fit=crop',
@@ -368,7 +368,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart Air Purifier with HEPA H13 Filter',
     description: 'Filters 99.97% of dust, pollen, smoke, and odors in rooms up to 500 sq ft. Real-time air quality indicator and quiet sleep mode.',
-    price: 159,
+    price: 5999,
     discount: 10,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&auto=format&fit=crop',
@@ -379,7 +379,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Professional High-Speed Smoothie Blender',
     description: '1800W commercial motor with 6 hardened stainless steel blades. Crushes ice and frozen fruit in seconds with 64oz BPA-free pitcher.',
-    price: 129,
+    price: 4499,
     discount: 18,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=600&auto=format&fit=crop',
@@ -390,7 +390,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart Jump Rope with Digital Counter',
     description: 'Tangle-free steel wire rope with HD LED display tracking jump reps, calories burned, and timer. Dual weighted handles.',
-    price: 29,
+    price: 899,
     discount: 0,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=600&auto=format&fit=crop',
@@ -401,7 +401,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Wireless Controller for Console & PC',
     description: 'Textured rubber grips, customizable rear paddles, adjustable trigger locks, and 30-hour rechargeable battery via USB-C.',
-    price: 69,
+    price: 2499,
     discount: 10,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=600&auto=format&fit=crop',
@@ -412,7 +412,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: '7.1 Surround Sound Gaming Headset',
     description: '50mm neodymium drivers, detachable noise-cancelling microphone, breathable memory foam ear cushions, and durable steel frame.',
-    price: 89,
+    price: 2999,
     discount: 20,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600&auto=format&fit=crop',
@@ -423,7 +423,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Ionic Hair Dryer with Heat Sensor',
     description: 'Negative ion technology seals moisture for frizz-free shine. Intelligent heat sensor prevents heat damage. Includes magnetic diffuser nozzle.',
-    price: 110,
+    price: 3499,
     discount: 15,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop',
@@ -434,7 +434,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Luxury Rose Quartz Facial Roller & Gua Sha',
     description: '100% natural Brazilian rose quartz stone tool set to relieve facial tension, reduce puffiness, and improve lymphatic drainage.',
-    price: 35,
+    price: 999,
     discount: 0,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop',
@@ -445,7 +445,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Portable Magnetic Power Bank 10000mAh',
     description: 'Snap-on magnetic wireless charging for smartphones, fold-out kickstand, 20W USB-C fast charging output, and LED battery percentage indicator.',
-    price: 49,
+    price: 1799,
     discount: 10,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600&auto=format&fit=crop',
@@ -456,7 +456,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'USB-C Dual 4K Docking Station 12-in-1',
     description: 'Expand single laptop port into dual HDMI 4K, DisplayPort, 100W Power Delivery, Ethernet 1Gbps, SD card reader, and 4 USB ports.',
-    price: 119,
+    price: 3999,
     discount: 15,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=600&auto=format&fit=crop',
@@ -467,7 +467,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Leather Minimalist Cardholder Wallet',
     description: 'RFID blocking tech with quick-access popup card mechanism. Crafted from top-grain calfskin leather, holding up to 8 cards & cash.',
-    price: 39,
+    price: 1299,
     discount: 0,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&auto=format&fit=crop',
@@ -478,7 +478,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Breathable Knit Tennis Sneakers',
     description: 'Ultra-lightweight mesh upper with responsive honeycomb foam insole for maximum breathability and effortless flexibility.',
-    price: 95,
+    price: 3299,
     discount: 20,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&auto=format&fit=crop',
@@ -489,7 +489,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart WiFi LED Desk Lamp with Wireless Charger',
     description: 'Dimmable color temperature from 2700K to 6500K, touch slider control, built-in 10W Qi wireless charging pad, and auto-off timer.',
-    price: 59,
+    price: 1999,
     discount: 12,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop',
@@ -500,7 +500,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Cast Iron Dutch Oven 6-Quart Enameled',
     description: 'Heavy-duty cast iron construction for superior heat retention and distribution. Durable porcelain enamel coating works on all cooktops including induction.',
-    price: 99,
+    price: 3499,
     discount: 10,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=600&auto=format&fit=crop',
@@ -511,7 +511,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Resistance Exercise Bands Set of 5',
     description: '100% natural latex loop bands with 5 incremental resistance levels (X-Light to X-Heavy). Includes mesh carry pouch and workout guide.',
-    price: 24,
+    price: 799,
     discount: 0,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop',
@@ -522,7 +522,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Foam Muscle Roller for Deep Tissue Recovery',
     description: 'High-density EVA foam grid design targets trigger points, relieves muscle soreness, and improves flexibility before and after workouts.',
-    price: 32,
+    price: 999,
     discount: 10,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop',
@@ -533,7 +533,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Large Extended RGB Gaming Mouse Pad',
     description: '35.4" x 15.7" extra-large desk mat with 14 customizable RGB lighting modes, waterproof micro-weave surface, and non-slip rubber base.',
-    price: 29,
+    price: 999,
     discount: 0,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?w=600&auto=format&fit=crop',
@@ -544,7 +544,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Streaming USB Condenser Microphone Kit',
     description: 'Studio cardioid pickup pattern, 192kHz/24-bit resolution, zero-latency headphone monitoring, touch mute button, and adjustable boom arm.',
-    price: 85,
+    price: 2799,
     discount: 15,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&auto=format&fit=crop',
@@ -555,7 +555,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Dead Sea Mud Facial Detox Mask',
     description: 'Mineral-rich 100% natural Dead Sea mud enriched with aloe vera and jojoba oil to deep-clean pores, absorb excess oil, and clarify skin.',
-    price: 28,
+    price: 899,
     discount: 0,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop',
@@ -566,7 +566,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Organic Argan Oil Hair Treatment 100ml',
     description: 'Cold-pressed 100% pure Moroccan Argan oil nourishes dry ends, tame flyaways, and restores brilliant natural shine without greasy residue.',
-    price: 22,
+    price: 799,
     discount: 0,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&auto=format&fit=crop',
@@ -577,7 +577,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Portable HD Projector 1080P Native',
     description: 'Supports 4K video input, 9500 lumens brightness, dual stereo speakers, 5G WiFi & Bluetooth 5.0, projecting up to 200 inch screen.',
-    price: 199,
+    price: 6999,
     discount: 22,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop',
@@ -588,7 +588,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Noise-Cancelling USB-C Conference Speakerphone',
     description: '360° omnidirectional 4-microphone array picks up voices from all directions up to 15ft away with smart AI noise suppression.',
-    price: 139,
+    price: 4999,
     discount: 10,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&auto=format&fit=crop',
@@ -599,7 +599,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Unisex Canvas Travel Tote & Crossbody',
     description: 'Durable heavy-duty military canvas tote with reinforced handles, zip top closure, laptop pocket, and removable shoulder strap.',
-    price: 59,
+    price: 1899,
     discount: 10,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop',
@@ -610,7 +610,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Waterproof Winter Thermal Parka Jacket',
     description: 'Windproof, snow-resistant shell insulation with faux-fur lined hood, fleece handwarmer pockets, and adjustable waist drawstring.',
-    price: 179,
+    price: 5999,
     discount: 20,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&auto=format&fit=crop',
@@ -621,7 +621,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Non-Stick Granite Cookware Set 10-Piece',
     description: 'PFOA-free eco-friendly granite nonstick coating. Includes 2 frying pans, 2 saucepans with glass lids, sauté pan, and casserole pot.',
-    price: 149,
+    price: 4999,
     discount: 15,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=600&auto=format&fit=crop',
@@ -632,7 +632,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Electric Stainless Steel Water Kettle 1.7L',
     description: 'Rapid 1500W boil system heats water in under 4 minutes. Features blue LED indicator light, auto shut-off, and boil-dry protection.',
-    price: 38,
+    price: 1299,
     discount: 0,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1585515320310-259814833e62?w=600&auto=format&fit=crop',
@@ -643,7 +643,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Cycling GPS Bike Computer with Heart Sensor',
     description: '2.4" anti-glare screen with turn-by-turn navigation, speed, cadence, elevation stats, and auto-sync to Strava via Bluetooth/ANT+.',
-    price: 129,
+    price: 4499,
     discount: 15,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&auto=format&fit=crop',
@@ -654,7 +654,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'High-Density Foam Fitness Exercise Mat',
     description: 'Extra thick 1/2-inch foam mat provides comfortable cushion for spine, hips, knees, and elbows on hard floors during Pilates & workouts.',
-    price: 35,
+    price: 1199,
     discount: 0,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop',
@@ -665,7 +665,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Console Vertical Cooling Stand with Dual Controller Docks',
     description: 'Dual high-speed silent cooling fans, 2 controller fast charging docks with LED status lights, and 12 game disc storage slots.',
-    price: 39,
+    price: 1399,
     discount: 10,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop',
@@ -676,7 +676,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Ergonomic Racing Style Gaming Desk',
     description: 'Carbon fiber textured surface, built-in cup holder, headphone hook, cable management tray, and sturdy Z-shaped steel frame.',
-    price: 189,
+    price: 6499,
     discount: 15,
     category: 'Gaming',
     image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&auto=format&fit=crop',
@@ -687,7 +687,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Vitamin C Brightening Facial Cleanser 200ml',
     description: 'Gentle foaming cleanser enriched with organic aloe vera, rosehip oil, and vitamin C to refresh, clarify, and illuminate dull skin.',
-    price: 24,
+    price: 799,
     discount: 0,
     category: 'Beauty',
     image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop',
@@ -698,7 +698,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Bamboo Wireless Charging Pad 15W Qi',
     description: 'Eco-friendly natural bamboo surface with 15W fast wireless charging for all Qi-enabled devices. Slim profile, LED indicator, and anti-slip base.',
-    price: 34,
+    price: 1199,
     discount: 0,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&auto=format&fit=crop',
@@ -709,7 +709,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Handmade Macramé Wall Hanging Decor',
     description: 'Artisan-crafted bohemian macramé wall tapestry made from 100% natural cotton rope. Adds texture and warmth to any living space or bedroom.',
-    price: 42,
+    price: 1399,
     discount: 0,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&auto=format&fit=crop',
@@ -720,7 +720,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Foldable Electric Scooter 25km Range',
     description: '350W brushless hub motor, 10-inch tubeless tires, triple braking system, and collapsible frame with LED headlamp for urban commuting.',
-    price: 549,
+    price: 18999,
     discount: 18,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop',
@@ -731,7 +731,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Tactical Waterproof Hiking Backpack 45L',
     description: 'Military-grade 1000D nylon with MOLLE webbing, hydration bladder compatible, rain cover included, and padded laptop sleeve up to 17 inches.',
-    price: 119,
+    price: 3999,
     discount: 12,
     category: 'Sports',
     image: 'https://images.unsplash.com/photo-1509762774915-6ad9760d2ff8?w=600&auto=format&fit=crop',
@@ -742,7 +742,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart Pet Auto Feeder with HD Camera',
     description: 'Scheduled and app-controlled portions for cats and dogs. Built-in 1080p wide-angle camera with night vision and two-way audio to check on your pet remotely.',
-    price: 89,
+    price: 2999,
     discount: 10,
     category: 'Pets',
     image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&auto=format&fit=crop',
@@ -753,7 +753,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Premium Dog Harness No-Pull Reflective',
     description: 'Padded mesh no-pull harness with four adjustment points, reflective stitching for night visibility, and dual leash clips for front and back.',
-    price: 29,
+    price: 999,
     discount: 0,
     category: 'Pets',
     image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&auto=format&fit=crop',
@@ -764,7 +764,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Vinyl Record Player with Bluetooth Output',
     description: 'Built-in stereo speakers with 3-speed belt-drive turntable, Bluetooth transmitter to connect wireless speakers, RCA output, and walnut wood cabinet.',
-    price: 159,
+    price: 4999,
     discount: 15,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop',
@@ -775,7 +775,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Handcrafted Scented Soy Wax Candle Set',
     description: 'Set of 4 premium soy wax candles in lavender, vanilla, sandalwood, and eucalyptus. 45-hour burn time each with cotton wicks and apothecary glass jars.',
-    price: 38,
+    price: 1299,
     discount: 0,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?w=600&auto=format&fit=crop',
@@ -786,7 +786,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Stainless Steel Cocktail Shaker Bartender Set',
     description: '12-piece professional bartender kit including shaker, strainer, jigger, muddler, mixing spoon, and 6 cocktail picks in a bamboo stand.',
-    price: 49,
+    price: 1699,
     discount: 10,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop',
@@ -797,7 +797,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Digital Drawing Tablet 10x6 Inch Pen Display',
     description: '8192 levels of pen pressure sensitivity, tilt recognition, express keys, compatible with Photoshop, Illustrator, Clip Studio, and major creative apps.',
-    price: 79,
+    price: 2699,
     discount: 20,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&auto=format&fit=crop',
@@ -808,7 +808,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Men Slim Fit Formal Oxford Dress Shirt',
     description: 'Premium 2-ply poplin cotton with wrinkle-resistant finish. Classic spread collar, mother-of-pearl buttons, and tailored slim silhouette for business or events.',
-    price: 55,
+    price: 1899,
     discount: 0,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop',
@@ -819,7 +819,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Women Floral Wrap Midi Dress',
     description: 'Flowy chiffon fabric in vibrant floral print with adjustable wrap tie waist, V-neckline, and flutter sleeves. Versatile for brunch, beach, or evening outings.',
-    price: 65,
+    price: 2199,
     discount: 15,
     category: 'Fashion',
     image: 'https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=600&auto=format&fit=crop',
@@ -830,7 +830,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Wooden Chess Set with Storage Board',
     description: 'Hand-carved solid Sheesham wood pieces with weighted felted bottoms. Folding board with interior storage for all 32 pieces. Perfect gift for chess enthusiasts.',
-    price: 59,
+    price: 1999,
     discount: 0,
     category: 'Toys & Games',
     image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=600&auto=format&fit=crop',
@@ -841,7 +841,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'LEGO Technic Formula Race Car 650 Pieces',
     description: 'Detailed replica Formula racing car with working steering, V8 engine pistons, adjustable rear wing, and realistic suspension. Ages 10 and up.',
-    price: 75,
+    price: 2499,
     discount: 10,
     category: 'Toys & Games',
     image: 'https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=600&auto=format&fit=crop',
@@ -852,7 +852,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Anti-Blue Light Computer Glasses UV400',
     description: 'TR90 flexible frame with blue light blocking and UV400 lenses to reduce digital eye strain, headaches, and improve sleep quality during screen use.',
-    price: 28,
+    price: 999,
     discount: 0,
     category: 'Electronics',
     image: 'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&auto=format&fit=crop',
@@ -863,7 +863,7 @@ const getProductsData = (getOfferTime) => [
   {
     name: 'Smart Food Scale with Nutritional Analysis',
     description: 'Syncs with 1000+ fitness apps via Bluetooth. Measures weight, calories, protein, carbs, and fat in grams. Rechargeable with tare function and food database.',
-    price: 42,
+    price: 1499,
     discount: 0,
     category: 'Home & Kitchen',
     image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop',
