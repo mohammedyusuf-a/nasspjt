@@ -1,8 +1,9 @@
-# nasspjt
+# ShopEZ — E-Commerce Application (nasspjt)
 
-[Google Drive folder](https://drive.google.com/drive/folders/1sjHcYt7nIm9UugCOmuFimCBf4O8f8bJu)
+## 📁 Project Resources & Documentation
+- **Google Drive Folder**: [ShopEZ Project Assets & Resources](https://drive.google.com/drive/folders/1sjHcYt7nIm9UugCOmuFimCBf4O8f8bJu)
 
-## Deployment Links & Environment Variables
+## 🚀 Deployment Links & Environment Variables
 
 ### Backend (Render)
 - **Render URL**: `https://nasspjt.onrender.com`
