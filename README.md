@@ -1,8 +1,7 @@
 # ShopEZ — E-Commerce Application (nasspjt)
 
 ## 📌 Quick Links & Live Links
-- **Vercel Live Web App**: [https://nasspjt-phi.vercel.app](https://nasspjt-phi.vercel.app)
-- **Render Backend API**: [https://nasspjt.onrender.com](https://nasspjt.onrender.com)
+- **Project Live Web App**: [https://nasspjt-phi.vercel.app](https://nasspjt-phi.vercel.app)
 - **GitHub Repository**: [https://github.com/mohammedyusuf-a/nasspjt.git](https://github.com/mohammedyusuf-a/nasspjt.git)
 - **Live Demo Video**: [Watch Live Demo Video](https://drive.google.com/file/d/13OUhv1gR-wZfKkX_zTph98jiAlkmNyyk/view?usp=drivesdk)
 - **Google Drive Folder**: [ShopEZ Project Assets & Resources](https://drive.google.com/drive/folders/1sjHcYt7nIm9UugCOmuFimCBf4O8f8bJu)
