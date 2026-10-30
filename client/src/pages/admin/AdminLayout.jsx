@@ -3,6 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 
 const navItems = [
   { to: '/admin', icon: '📊', label: 'Dashboard', end: true },
+  { to: '/admin/revenue', icon: '💰', label: 'Revenue' },
   { to: '/admin/products', icon: '📦', label: 'Products' },
   { to: '/admin/orders', icon: '🛒', label: 'All Orders' },
   { to: '/admin/users', icon: '👥', label: 'Users' },

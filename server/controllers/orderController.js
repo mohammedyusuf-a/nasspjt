@@ -130,4 +130,75 @@ const getOrderStats = async (req, res) => {
   }
 };
 
-module.exports = { createOrder, getMyOrders, getAllOrders, getOrderById, updateOrderStatus, getOrderStats };
+// GET /api/orders/revenue (admin)
+const getRevenueAnalytics = async (req, res) => {
+  try {
+    const totalOrders = await Order.countDocuments();
+    const revenueAgg = await Order.aggregate([
+      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
+    ]);
+    const totalRevenue = revenueAgg[0]?.total || 0;
+
+    const paidAgg = await Order.aggregate([
+      { $match: { paymentStatus: 'Paid' } },
+      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
+    ]);
+    const paidRevenue = paidAgg[0]?.total || 0;
+
+    const pendingAgg = await Order.aggregate([
+      { $match: { paymentStatus: 'Pending' } },
+      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
+    ]);
+    const pendingRevenue = pendingAgg[0]?.total || 0;
+
+    // Revenue by payment method
+    const paymentMethodsAgg = await Order.aggregate([
+      {
+        $group: {
+          _id: '$paymentMethod',
+          revenue: { $sum: '$totalAmount' },
+          count: { $sum: 1 }
+        }
+      }
+    ]);
+
+    const defaultMethods = ['UPI', 'Card', 'NetBanking', 'COD'];
+    const paymentMethodBreakdown = defaultMethods.map(method => {
+      const found = paymentMethodsAgg.find(p => p._id === method);
+      return {
+        method,
+        revenue: found ? found.revenue : 0,
+        count: found ? found.count : 0
+      };
+    });
+
+    const averageOrderValue = totalOrders > 0 ? Math.round(totalRevenue / totalOrders) : 0;
+
+    // Monthly trends (aggregate by year & month)
+    const monthlyAgg = await Order.aggregate([
+      {
+        $group: {
+          _id: { $dateToString: { format: '%Y-%m', date: '$createdAt' } },
+          revenue: { $sum: '$totalAmount' },
+          orders: { $sum: 1 }
+        }
+      },
+      { $sort: { _id: 1 } },
+      { $limit: 12 }
+    ]);
+
+    res.json({
+      totalRevenue,
+      paidRevenue,
+      pendingRevenue,
+      totalOrders,
+      averageOrderValue,
+      paymentMethodBreakdown,
+      monthlyTrends: monthlyAgg
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+module.exports = { createOrder, getMyOrders, getAllOrders, getOrderById, updateOrderStatus, getOrderStats, getRevenueAnalytics };

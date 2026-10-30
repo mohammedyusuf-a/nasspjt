@@ -78,10 +78,10 @@ export default function Dashboard() {
       {/* Quick Links */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
         {[
+          { to: '/admin/revenue', icon: '💰', title: 'Revenue Analytics', desc: 'Track sales, payments & earnings' },
           { to: '/admin/products', icon: '📦', title: 'Manage Products', desc: 'Add, edit, delete products' },
           { to: '/admin/orders', icon: '🛒', title: 'View Orders', desc: 'Track and update orders' },
           { to: '/admin/users', icon: '👥', title: 'Manage Users', desc: 'View and remove users' },
-          { to: '/admin/products/add', icon: '➕', title: 'Add Product', desc: 'List a new product' },
         ].map((q) => (
           <Link key={q.to} to={q.to} className="glass glass-hover" style={{ padding: '1.25rem', display: 'block', textDecoration: 'none' }}>
             <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{q.icon}</div>
@@ -89,6 +89,33 @@ export default function Dashboard() {
             <div style={{ fontSize: '0.8rem', color: 'var(--text-400)', marginTop: '4px' }}>{q.desc}</div>
           </Link>
         ))}
+      </div>
+
+      {/* Project Revenue & Financial Overview Card */}
+      <div className="glass" style={{ padding: '1.5rem', marginBottom: '2rem', borderRadius: 'var(--r-md)', borderLeft: '4px solid #10b981' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontSize: '1.25rem' }}>💰</span>
+              <h3 style={{ fontSize: '1.1rem', margin: 0 }}>Project Revenue Overview</h3>
+              <span className="badge badge-green">Live Metric</span>
+            </div>
+            <p style={{ color: 'var(--text-400)', fontSize: '0.85rem', marginTop: 4 }}>
+              Total gross revenue generated across all customer checkouts and orders.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-400)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Gross Revenue</div>
+              <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#10b981', fontFamily: 'Outfit' }}>
+                ₹{(stats.totalRevenue || 0).toLocaleString()}
+              </div>
+            </div>
+            <Link to="/admin/revenue" className="btn btn-primary btn-sm" id="dashboard-view-revenue-btn">
+              Explore Revenue Details →
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Recent Orders */}

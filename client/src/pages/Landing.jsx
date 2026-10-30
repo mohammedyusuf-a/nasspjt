@@ -106,7 +106,7 @@ export default function Landing() {
                 placeholder="Search products, brands & categories..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                style={{ flex: 1, background: 'transparent', border: 'none', padding: '0.75rem 1rem', color: '#fff', outline: 'none', fontSize: '0.95rem' }}
+                style={{ flex: 1, background: 'transparent', border: 'none', padding: '0.75rem 1rem', color: 'var(--text-100)', outline: 'none', fontSize: '0.95rem' }}
               />
               <button type="submit" className="btn btn-primary" style={{ padding: '0.75rem 1.5rem', borderRadius: 'var(--r-md)', fontWeight: 600 }}>
                 🔍 Search
@@ -122,15 +122,16 @@ export default function Landing() {
               </Link>
             </div>
 
-            <div className="hero-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1.5rem' }}>
+            <div className="hero-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '1rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1.5rem' }}>
               {[
+                { value: '₹50L+', label: 'Project Revenue' },
                 { value: '10K+', label: 'Products' },
                 { value: '50K+', label: 'Happy Buyers' },
                 { value: '4.9★', label: 'Rating' },
                 { value: '24/7', label: 'Support' },
               ].map((s) => (
                 <div key={s.label}>
-                  <div className="hero-stat-value" style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-100)' }}>{s.value}</div>
+                  <div className="hero-stat-value" style={{ fontSize: '1.4rem', fontWeight: 800, color: s.label === 'Project Revenue' ? '#10b981' : 'var(--text-100)' }}>{s.value}</div>
                   <div className="hero-stat-label" style={{ fontSize: '0.75rem', color: 'var(--text-400)' }}>{s.label}</div>
                 </div>
               ))}
@@ -190,14 +191,47 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* ─── Project Revenue & Trust Milestone Banner ─── */}
+      <section style={{ padding: '0 0 1.5rem' }}>
+        <div className="container">
+          <div className="glass" style={{
+            padding: '1.25rem 2rem',
+            borderRadius: 'var(--r-lg)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '1rem',
+            background: 'linear-gradient(90deg, rgba(16,185,129,0.12) 0%, rgba(124,58,237,0.1) 100%)',
+            border: '1px solid rgba(16,185,129,0.25)'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <span style={{ fontSize: '2rem' }}>💰</span>
+              <div>
+                <div style={{ fontWeight: 700, color: 'var(--text-100)', fontSize: '1.05rem' }}>
+                  ₹50,00,000+ Verified Project Revenue Milestone
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-300)' }}>
+                  Trusted by 50,000+ satisfied buyers across India with fast delivery & genuine warranty.
+                </div>
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <span className="badge badge-green">ISO 9001 Certified</span>
+              <span className="badge badge-purple">100% Secure Checkout</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Features Grid ─── */}
-      <section className="section-sm" style={{ background: 'rgba(255,255,255,0.015)', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)' }}>
+      <section className="section-sm" style={{ background: 'var(--table-th-bg, rgba(255,255,255,0.015))', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)' }}>
         <div className="container">
           <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
             {features.map((f) => (
               <div key={f.title} className="feature-card glass-card hover-lift" style={{ padding: '1.5rem', borderRadius: 'var(--r-md)' }}>
                 <div className="feature-icon" style={{ fontSize: '2.2rem', marginBottom: '0.75rem' }}>{f.icon}</div>
-                <div className="feature-title" style={{ fontSize: '1.05rem', fontWeight: 700, color: '#fff', marginBottom: '0.4rem' }}>{f.title}</div>
+                <div className="feature-title" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-100)', marginBottom: '0.4rem' }}>{f.title}</div>
                 <div className="feature-desc" style={{ fontSize: '0.85rem', color: 'var(--text-300)' }}>{f.desc}</div>
               </div>
             ))}

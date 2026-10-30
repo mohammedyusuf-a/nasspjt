@@ -2,10 +2,12 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Navbar() {
   const { user, logout, isAdmin } = useAuth();
   const { cartCount } = useCart();
+  const { isDark, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -34,6 +36,19 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-actions">
+          {/* Theme Toggle (Light / Dark Mode) */}
+          <button
+            type="button"
+            className="theme-toggle-btn"
+            id="navbar-theme-toggle-btn"
+            onClick={toggleTheme}
+            title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            <span className="theme-toggle-icon">{isDark ? "☀️" : "🌙"}</span>
+            <span className="theme-toggle-text">{isDark ? "Light" : "Dark"}</span>
+          </button>
+
           {user && (
             <Link to="/cart" className="cart-btn" id="navbar-cart-btn" title="Cart">
               🛒

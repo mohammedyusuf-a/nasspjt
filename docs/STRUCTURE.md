@@ -8,9 +8,9 @@ nasspjt/
 │   ├── public/                 # Static assets
 │   ├── src/
 │   │   ├── components/         # Reusable UI Components (Navbar, Footer, ProductCard, etc.)
-│   │   ├── context/            # Global React Contexts (AuthContext, CartContext)
+│   │   ├── context/            # Global React Contexts (AuthContext, CartContext, ThemeContext)
 │   │   ├── pages/              # Page View Components
-│   │   │   ├── admin/          # Admin Dashboard, Products, Orders & Users management
+│   │   │   ├── admin/          # Admin Suite: Dashboard, Revenue Analytics, Products, Orders & Users
 │   │   │   ├── Cart.jsx        # Shopping Cart Page
 │   │   │   ├── Checkout.jsx    # Checkout & Payment Page
 │   │   │   ├── Landing.jsx     # Home / Landing Page
@@ -21,7 +21,7 @@ nasspjt/
 │   │   │   └── OrderSuccess.jsx# Order Confirmation Page
 │   │   ├── utils/              # Utility Functions & Helper modules
 │   │   ├── App.jsx             # Main Application Routes & Layout
-│   │   ├── index.css           # Global Design System & Styling
+│   │   ├── index.css           # Global Design System, Glassmorphism & Light/Dark Themes
 │   │   └── main.jsx            # React App Entrypoint
 │   ├── index.html              # HTML Shell
 │   ├── package.json            # Client Dependencies & Scripts

@@ -23,8 +23,9 @@ ShopEZ is a full-stack, feature-rich E-Commerce application built with React, Vi
 - 👑 **Admin Management Suite**:
   - Full Product CRUD (Add, Edit, Delete, Stock update)
   - Order Tracking & Status updates (Processing, Confirmed, Shipped, Delivered, Cancelled)
-  - User Management & Admin Revenue Analytics Dashboard
-- 🎨 **Responsive UI/UX**: Dark mode theme, glassmorphism design, CSS micro-animations, and mobile-friendly layout.
+  - User Management & Admin Controls
+  - 💰 **Project Revenue Analytics**: Comprehensive revenue tracking, gross metrics, settled vs pending revenue, average order value (AOV), payment channel breakdown (UPI, Card, NetBanking, COD), monthly revenue trajectory, and CSV report export.
+- 🎨 **Adaptive UI/UX & Themes**: Dual Light Mode & Dark Mode with seamless instant switching, localStorage persistence, glassmorphism design, CSS micro-animations, and 100% mobile-friendly responsive layout.
 
 ---
 

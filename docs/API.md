@@ -48,6 +48,7 @@ Base API Endpoint (Local): `http://localhost:8000/api`
 | `GET` | `/api/orders/my-orders` | Get orders for logged-in user | Yes |
 | `GET` | `/api/orders` | Get all orders | Yes (Admin) |
 | `GET` | `/api/orders/stats` | Get sales & order analytics | Yes (Admin) |
+| `GET` | `/api/orders/revenue` | Get detailed project revenue analytics & payment breakdowns | Yes (Admin) |
 | `PUT` | `/api/orders/:id/status` | Update order status | Yes (Admin) |
 
 ---
